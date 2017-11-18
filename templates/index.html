@@ -29,19 +29,13 @@
 			</form>
 		</div>
 		<div id="entries-area">
-
 			<h2>The comments history</h2>
 			<div class="entry">
-				<h3>Guest wrote comments(2011/10/01 10:00:00):</h3>
-				<p>
-					Comments<br/>
-					Comments
-				</p>
-				<h3>Guest wrote comments(2011/10/01 10:00:00):</h3>
-				<p>
-					Comments<br/>
-					Comments
-				</p>
+				{% for greeting in greeting_list %}
+					<h3>{{greeting.name}}
+						commented at {{greeting.create_at}}:</h3>
+				<p>{{greeting.comment}}</p>
+			{% endfor %}
 			</div>
 		</div>
 	</div>
